@@ -29,7 +29,10 @@
 # since they will be recreated, and may cause churn.  Uncomment if using
 # auto-import.
 # .idea/artifacts
-# .idea/compiler.xml
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/vcs.xml
 # .idea/jarRepositories.xml
 # .idea/modules.xml
 # .idea/*.iml
@@ -48,6 +51,8 @@ cmake-build-*/
 
 # IntelliJ
 out/
+target/
+
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
