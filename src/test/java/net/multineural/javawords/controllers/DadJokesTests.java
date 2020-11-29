@@ -1,5 +1,6 @@
 package net.multineural.javawords.controllers;
 
+import net.multineural.javawords.model.Joke;
 import net.multineural.javawords.service.DadJokeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,10 @@ public class DadJokesTests {
     @Test
     public void testDadRandom() throws  Exception {
 
-        when(dadJokeService.random()).thenReturn("lol");
+        Joke joke = new Joke();
+        joke.setText("Welcome to conjunctivitis.com, a site for sore eyes.");
+
+        when(dadJokeService.random()).thenReturn(joke);
 
         this.mockMvc.perform(get("/jokes/dad/random")).andExpect(status().isOk());
 

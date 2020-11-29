@@ -1,5 +1,6 @@
 package net.multineural.javawords.controllers;
 
+import net.multineural.javawords.model.Joke;
 import net.multineural.javawords.service.DadJokeService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,7 @@ public class DadJokes {
     }
 
     @GetMapping(value = "/dad/random", produces = {"application/json"})
-    public String randomDadJoke() {
+    public Joke randomDadJoke() {
         return dadJokeService.random();
     }
 

@@ -1,10 +1,11 @@
 package net.multineural.javawords.service;
 
+import net.multineural.javawords.model.Joke;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-//@SpringBootTest
+
 class StandardDadJokeServiceTests {
 
 	// no fancy injection needed, yet
@@ -13,8 +14,8 @@ class StandardDadJokeServiceTests {
 	@Test
 	public void testRandom() throws Exception {
 
-		String joke = service.random();
-		assertTrue(joke.startsWith("Welcome"));
+		Joke joke = service.random();
+		assertTrue(joke.getText().startsWith("Welcome"));
 
 	}
 
